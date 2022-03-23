@@ -1,0 +1,279 @@
+<?xml version="1.0" ?>
+<robot name="robot_d" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+<xacro:include filename="$(find robot_d_description)/urdf/materials.xacro" />
+<xacro:include filename="$(find robot_d_description)/urdf/robot_d.trans" />
+<xacro:include filename="$(find robot_d_description)/urdf/robot_d.gazebo" />
+<link name="base_link">
+  <inertial>
+    <origin rpy="0 0 0" xyz="8.840965278505111e-05 2.8365098021494976e-06 0.04400008750781215"/>
+    <mass value="9.973637068264665"/>
+    <inertia ixx="0.016348" ixy="2e-06" ixz="-3e-05" iyy="0.032085" iyz="-1e-06" izz="0.035021"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+    <geometry>
+      <mesh filename="package://robot_d_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+    <geometry>
+      <mesh filename="package://robot_d_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="right_f_w_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="5.599289453622758e-08 0.01617341410294361 6.413701695087703e-08"/>
+    <mass value="1.1313312337085548"/>
+    <inertia ixx="0.000652" ixy="-0.0" ixz="0.0" iyy="0.001056" iyz="-0.0" izz="0.000652"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.06 0.0772 -0.025"/>
+    <geometry>
+      <mesh filename="package://robot_d_description/meshes/right_f_w_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.06 0.0772 -0.025"/>
+    <geometry>
+      <mesh filename="package://robot_d_description/meshes/right_f_w_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="right_b_w_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="5.5992894529288684e-08 0.01617341410294358 6.413701697516316e-08"/>
+    <mass value="1.1313312337085548"/>
+    <inertia ixx="0.000652" ixy="-0.0" ixz="0.0" iyy="0.001056" iyz="-0.0" izz="0.000652"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.06 0.0772 -0.025"/>
+    <geometry>
+      <mesh filename="package://robot_d_description/meshes/right_b_w_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.06 0.0772 -0.025"/>
+    <geometry>
+      <mesh filename="package://robot_d_description/meshes/right_b_w_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="left_f_w_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="3.7150898295201795e-08 -0.01617340603079921 1.9397610214952343e-07"/>
+    <mass value="1.1313386804395582"/>
+    <inertia ixx="0.000652" ixy="-0.0" ixz="-0.0" iyy="0.001056" iyz="0.0" izz="0.000652"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.06 -0.0772 -0.025"/>
+    <geometry>
+      <mesh filename="package://robot_d_description/meshes/left_f_w_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.06 -0.0772 -0.025"/>
+    <geometry>
+      <mesh filename="package://robot_d_description/meshes/left_f_w_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="left_b_w_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="3.536275892945806e-08 -0.016173406030799233 1.9397610213564564e-07"/>
+    <mass value="1.1313386804395562"/>
+    <inertia ixx="0.000652" ixy="-0.0" ixz="-0.0" iyy="0.001056" iyz="0.0" izz="0.000652"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.06 -0.0772 -0.025"/>
+    <geometry>
+      <mesh filename="package://robot_d_description/meshes/left_b_w_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.06 -0.0772 -0.025"/>
+    <geometry>
+      <mesh filename="package://robot_d_description/meshes/left_b_w_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="cam_x_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.00013224652821671636 -1.4646327235276284e-10 0.020095834537817325"/>
+    <mass value="0.1424612132221006"/>
+    <inertia ixx="7.2e-05" ixy="-0.0" ixz="0.0" iyy="2.4e-05" iyz="0.0" izz="5.5e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.0 -0.0 -0.080962"/>
+    <geometry>
+      <mesh filename="package://robot_d_description/meshes/cam_x_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.0 -0.0 -0.080962"/>
+    <geometry>
+      <mesh filename="package://robot_d_description/meshes/cam_x_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="cam-y_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="5.796475190008501e-06 0.019999999627005032 -7.184472045063117e-10"/>
+    <mass value="0.02166590340523958"/>
+    <inertia ixx="2e-06" ixy="0.0" ixz="0.0" iyy="0.0" iyz="-0.0" izz="2e-06"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.0 0.02 -0.118"/>
+    <geometry>
+      <mesh filename="package://robot_d_description/meshes/cam-y_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.0 0.02 -0.118"/>
+    <geometry>
+      <mesh filename="package://robot_d_description/meshes/cam-y_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="camera_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.004000000000000001 -7.599592333207284e-10 1.759173764992461e-09"/>
+    <mass value="0.003156672298327097"/>
+    <inertia ixx="0.0" ixy="-0.0" ixz="0.0" iyy="0.0" iyz="-0.0" izz="0.0"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.005 0.0 -0.118"/>
+    <geometry>
+      <mesh filename="package://robot_d_description/meshes/camera_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.005 0.0 -0.118"/>
+    <geometry>
+      <mesh filename="package://robot_d_description/meshes/camera_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="ultra_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.0017048228700862547 -7.049244960230272e-05 9.387731564336477e-10"/>
+    <mass value="0.0005247690252135915"/>
+    <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="-0.0" izz="0.0"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.061536 -0.0 -0.063"/>
+    <geometry>
+      <mesh filename="package://robot_d_description/meshes/ultra_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.061536 -0.0 -0.063"/>
+    <geometry>
+      <mesh filename="package://robot_d_description/meshes/ultra_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="lidar_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-1.3877787807814457e-17 0.0 0.004999524227066329"/>
+    <mass value="0.02157699521291738"/>
+    <inertia ixx="1e-06" ixy="-0.0" ixz="-0.0" iyy="1e-06" iyz="-0.0" izz="1e-06"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.07 -0.0 -0.090962"/>
+    <geometry>
+      <mesh filename="package://robot_d_description/meshes/lidar_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.07 -0.0 -0.090962"/>
+    <geometry>
+      <mesh filename="package://robot_d_description/meshes/lidar_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<joint name="r_f_w_j" type="continuous">
+  <origin rpy="0 0 0" xyz="0.06 -0.0772 0.025"/>
+  <parent link="base_link"/>
+  <child link="right_f_w_1"/>
+  <axis xyz="0.0 -1.0 0.0"/>
+</joint>
+
+<joint name="r_b_w_j" type="continuous">
+  <origin rpy="0 0 0" xyz="-0.06 -0.0772 0.025"/>
+  <parent link="base_link"/>
+  <child link="right_b_w_1"/>
+  <axis xyz="0.0 -1.0 0.0"/>
+</joint>
+
+<joint name="l_f_w_j" type="continuous">
+  <origin rpy="0 0 0" xyz="0.06 0.0772 0.025"/>
+  <parent link="base_link"/>
+  <child link="left_f_w_1"/>
+  <axis xyz="0.0 1.0 0.0"/>
+</joint>
+
+<joint name="l_b_w_j" type="continuous">
+  <origin rpy="0 0 0" xyz="-0.06 0.0772 0.025"/>
+  <parent link="base_link"/>
+  <child link="left_b_w_1"/>
+  <axis xyz="0.0 1.0 0.0"/>
+</joint>
+
+<joint name="cam_x_j" type="revolute">
+  <origin rpy="0 0 0" xyz="0.0 0.0 0.080962"/>
+  <parent link="base_link"/>
+  <child link="cam_x_1"/>
+  <axis xyz="0.0 0.0 1.0"/>
+  <limit effort="100" lower="-2.70526" upper="3.141593" velocity="100"/>
+</joint>
+
+<joint name="cam_y_j" type="revolute">
+  <origin rpy="0 0 0" xyz="0.0 -0.02 0.037038"/>
+  <parent link="cam_x_1"/>
+  <child link="cam-y_1"/>
+  <axis xyz="0.0 1.0 0.0"/>
+  <limit effort="100" lower="-0.959931" upper="0.349066" velocity="100"/>
+</joint>
+
+<joint name="cam_j" type="fixed">
+  <origin rpy="0 0 0" xyz="0.005 0.02 0.0"/>
+  <parent link="cam-y_1"/>
+  <child link="camera_1"/>
+</joint>
+
+<joint name="ultra_j" type="fixed">
+  <origin rpy="0 0 0" xyz="0.061536 0.0 0.063"/>
+  <parent link="base_link"/>
+  <child link="ultra_1"/>
+</joint>
+
+<joint name="lidar_j" type="fixed">
+  <origin rpy="0 0 0" xyz="0.07 0.0 0.090962"/>
+  <parent link="base_link"/>
+  <child link="lidar_1"/>
+</joint>
+
+</robot>
